@@ -1,13 +1,18 @@
 package third.controller;
 
+import third.View.PopUp;
+
 public class Controller
 {
+	private third.View.PopUp view;
+	
+	
 	public int x;
 	public String g;
 	
 	public void start()
 	{
-		
+		view = new PopUp();
 		workWithLoops();
 	}
 	
@@ -21,6 +26,10 @@ public class Controller
 		//step 2: test var
 		while (!isFinished)
 		{
+			view.displayMessage("hello");
+			String words = view.askQuestion("what is answer?");
+			view.displayMessage(words);
+			
 			//step 3: do stuff
 			System.out.println("this is a loop  " + counter);
 			counter += 1;
