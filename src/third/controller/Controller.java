@@ -56,6 +56,7 @@ public class Controller
 			System.out.println("special" + special);
 			special--;
 		}while (special > 0);
+	}
 	
 	
 	private void sampleIfBlocks()
