@@ -89,6 +89,21 @@ public class Controller
 			input = view.askQuestion("Typoe in more or 'done' to stop");
 		}
 		
+		view.displayMessage("this is big array" + userInput.size());
+		
+		for (int index = 0; index < userInput.size(); index += 1)
+		{
+			view.displayMessage("the value stored" + index + "is" + userInput.get(index));
+		}
+		
+		view.displayMessage("ware gona destrou");
+		
+		for (int index = userInput.size() - 1; index >= 0; index --)
+		{
+			String contents = userInput.remove(index);
+			view.displayMessage("you removed" + contents + "from" + index);
+		}
+		
 	}
 	
 }
