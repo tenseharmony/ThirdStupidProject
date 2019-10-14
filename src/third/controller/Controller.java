@@ -2,6 +2,8 @@ package third.controller;
 
 import third.View.PopUp;
 
+import java.util.ArrayList;
+
 public class Controller
 {
 	private third.View.PopUp view;
@@ -14,6 +16,7 @@ public class Controller
 	{
 		view = new PopUp();
 		workWithLoops();
+		makingLists();
 	}
 	
 	
@@ -70,6 +73,21 @@ public class Controller
 	
 	private void sampleIfBlocks()
 	{
+		
+	}
+	
+	
+	private void makingLists()
+	{
+		ArrayList<String> userInput = new ArrayList<String>();
+		
+		String input = view.askQuestion("type in program");
+		
+		while (!input.equalsIgnoreCase("done"))
+		{
+			userInput.add(input);
+			input = view.askQuestion("Typoe in more or 'done' to stop");
+		}
 		
 	}
 	
